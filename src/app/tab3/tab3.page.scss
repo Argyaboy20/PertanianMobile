@@ -1,0 +1,354 @@
+.icn {
+  height: 30px;
+  width: 30px;
+  margin-left: 60px;
+  margin-bottom: -20px;
+}
+
+.pred {
+  margin-left: 80px;
+  margin-top: -10px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  
+  ion-spinner {
+    width: 50px;
+    height: 50px;
+  }
+  
+  p {
+    margin-top: 10px;
+    color: var(--ion-color-medium);
+  }
+}
+
+ion-card {
+  margin: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+// Common styles for both cards
+.weather-info-card, .weather-condition-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  
+  ion-card-header {
+    padding: 16px;
+    
+    ion-card-title {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+  
+  ion-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+// Sunny animation
+@keyframes sunny {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+// Partly sunny animation
+@keyframes partly-sunny {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+// Cloudy animation
+@keyframes cloudy {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(8px) translateY(-2px); }
+  100% { transform: translateX(0); }
+}
+
+// Cool/thermometer animation
+@keyframes cool {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+// Snow animation
+@keyframes snow {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(5px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+// Specific styles for weather condition card
+.weather-condition-card {
+  ion-card-content {
+    align-items: center;
+    .weather-icon {
+      font-size: 160px; 
+      margin-bottom: 5px;
+      color: var(--ion-color-primary);
+      
+      // Apply animations based on weather condition
+      &[name="sunny"],
+      &[name="sunny-outline"] {
+        animation: sunny 8s linear infinite;
+        color: #FFB300;
+      }
+      
+      &[name="partly-sunny-outline"] {
+        animation: partly-sunny 4s ease-in-out infinite;
+        color: #FFB300;
+      }
+      
+      &[name="cloudy-outline"] {
+        animation: cloudy 4s ease-in-out infinite;
+        color: #7E8B9C;
+      }
+      
+      &[name="thermometer-outline"] {
+        animation: cool 2s ease-in-out infinite;
+        color: #4ECDE6;
+      }
+      
+      &[name="snow-outline"] {
+        animation: snow 3s ease-in-out infinite;
+        color: #89CFF0;
+      }
+    }
+    
+    h2 {
+      font-size: 1.5em;
+      font-weight: 500;
+      margin: 0;
+      color: var(--ion-color-dark);
+    }
+
+    .temperature {
+      font-size: 2.2em; 
+      font-weight: bold;
+      margin: 10px 0;
+      color: var(--ion-color-dark);
+    }
+  }
+}
+
+ion-item {
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+}
+
+.time-display {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+ion-fab-button::part(native) {
+  height: 42px;
+  width: 42px;
+  background-color: #b7f399;
+  border-radius: 15px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  color: black;
+  margin-left: 10px;
+  margin-top: -35px;
+}
+
+ion-fab-button::part(native):hover::after {
+  background-color: #a3e681;
+}
+
+ion-fab-button::part(native):active::after {
+  background-color: #87d361;
+}
+
+
+/* Tiny Mobile Devices (320px - 375px) */
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .icn {
+    height: 24px;
+    width: 24px;
+    margin-left: 60px;
+    margin-bottom: -15px;
+  }
+
+  .pred {
+    text-align: left;
+    margin-left: 70px;
+    font-size: 16px;
+  }
+
+  ion-card {
+    margin: 8px;
+    
+    ion-card-title {
+      font-size: 18px;
+    }
+    
+    ion-card-subtitle {
+      font-size: 14px;
+    }
+  }
+
+  .time-display {
+    font-size: 0.9rem;
+  }
+
+  ion-fab-button::part(native) {
+    height: 36px;
+    width: 36px;
+    margin-left: 15px;
+    margin-top: -30px;
+  }
+
+  .loading-container {
+    height: 150px;
+    
+    ion-spinner {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .weather-condition-card {
+    ion-card-content {
+      .weather-icon {
+        font-size: 80px; 
+      }
+    }
+  }
+}
+
+
+/* Small Mobile Devices (376px - 475px) */
+@media screen and (min-width: 376px) and (max-width: 475px) {
+  .icn {
+    height: 26px;
+    width: 26px;
+    margin-left: 65px;
+  }
+
+  .pred {
+    text-align: left;
+    margin-left: 80px;
+    font-size: 18px;
+  }
+
+  ion-card {
+    margin: 12px;
+    
+    ion-card-title {
+      font-size: 19px;
+    }
+    
+    ion-card-subtitle {
+      font-size: 15px;
+    }
+  }
+
+  .loading-container {
+    height: 175px;
+  }
+}
+
+/* Tablets (476px - 768px) */
+@media screen and (min-width: 476px) and (max-width: 768px) {
+  ion-content {
+    --padding-start: 10%;
+    --padding-end: 10%;
+  }
+
+  .icn {
+    height: 28px;
+    width: 28px;
+    margin-left: 70px;
+  }
+
+  .pred {
+    margin-left: 90px;
+    font-size: 20px;
+  }
+
+  ion-card {
+    margin: 20px;
+    
+    ion-card-title {
+      font-size: 22px;
+    }
+    
+    ion-card-subtitle {
+      font-size: 16px;
+    }
+  }
+
+  .loading-container {
+    height: 250px;
+    
+    ion-spinner {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .weather-condition-card {
+    ion-card-content {
+      .weather-icon {
+        font-size: 120px;
+      }
+    }
+  }
+}
+
+/* Large Tablets (769px - 999px) */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  ion-content {
+    --padding-start: 15%;
+    --padding-end: 15%;
+  }
+
+  .icn {
+    height: 32px;
+    width: 32px;
+    margin-left: 80px;
+  }
+
+  .pred {
+    margin-left: 100px;
+    font-size: 22px;
+  }
+
+  ion-card {
+    margin: 24px;
+    
+    ion-card-title {
+      font-size: 24px;
+    }
+    
+    ion-card-subtitle {
+      font-size: 18px;
+    }
+  }
+
+  .weather-condition-card {
+    ion-card-content {
+      .weather-icon {
+        font-size: 140px; 
+      }
+    }
+  }
+}

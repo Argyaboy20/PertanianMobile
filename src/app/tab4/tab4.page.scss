@@ -1,0 +1,186 @@
+ion-content {
+    --background: url('/assets/bg_halamandepan.png') no-repeat center center fixed;
+    --background-size: cover;
+  }
+
+ion-card, ion-item {
+    --background: url('/assets/bg_halamandepan.png') no-repeat center center fixed;
+    --background-size: cover;
+}
+
+ion-list {
+    background: url('/assets/bg_halamandepan.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.tit {
+    font-family: 'Lucida Sans';
+}
+
+ion-card-title {
+    text-align: center;
+    margin-top: -10px;
+}
+
+.password-toggle {
+    font-size: 22px;
+    margin-right: -2px;
+    margin-top: 10px;
+}
+
+ion-button[fill="clear"] .password-toggle {
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+}
+
+.lbl {
+    margin-left: 50px;
+}
+
+.inf {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0px auto;
+    display: block;
+    width: fit-content;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+ion-fab-button::part(native) {
+    height: 45px;
+    width: 45px;
+    background-color: #b7f399;
+    border-radius: 15px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    color: black;
+    margin-left: 30px;
+    margin-top: 70px;
+}
+
+ion-fab-button::part(native):hover::after {
+    background-color: #a3e681;
+}
+
+ion-fab-button::part(native):active::after {
+    background-color: #87d361;
+}
+
+/* Tiny Mobile Devices (320px - 374px) */
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    ion-content {
+        background: url('/assets/bg_halamandepan.png') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 480px;
+        max-height: 885px;
+        padding: 10px;
+    }
+
+    ion-card {
+        margin: 5px;
+        width: 95%;
+    }
+
+    ion-card-title {
+        font-size: 18px;
+        margin-top: -10px;
+        text-align: auto;
+    }
+
+    ion-text {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        font-size: 14px;
+    }
+
+    ion-fab-button::part(native) {
+        height: 40px;
+        width: 40px;
+        margin-left: 15px;
+        margin-top: 70px;
+    }
+
+}
+
+ /* Small Mobile Devices (375px - 575px) */
+ @media screen and (min-width: 375px) and (max-width: 575px) {
+    ion-content {
+        background: url('/assets/bg_halamandepan.png') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 668px;
+        max-height: 932px;
+        padding: 15px;
+    }
+
+    .tit {
+        font-family: 'Lucida Sans';    
+    }
+
+    ion-card {
+        width: 97%;
+        margin: 15px auto;
+    }
+
+    ion-card-title {
+        font-size: 18px;
+        margin-top: -10px;
+        text-align: auto;
+    }
+
+    ion-fab-button::part(native) {
+        height: 40px;
+        width: 40px;
+        margin-left: 15px;
+        margin-top: 60px;
+    }
+
+    .footer {
+        margin-top: -20px auto;
+    }
+}
+
+/* Tablets (576px - 768px) */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    ion-content {
+        background: url('/assets/bg_halamandepan.png') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 880px;
+        max-height: 1050px;
+        padding: 15px;
+    }
+}
+
+/* Large Tablets (769px - 999px) */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    ion-content {
+        background: url('/assets/bg_halamandepan.png') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 1190px;
+        max-height: 1400px;
+        padding: 15px;
+    }
+}
+
+/* Desktop (1000px and above) */
+@media screen and (min-width: 1000px) {
+    ion-content {
+        background: url('/assets/bg_halamandepan.png') no-repeat center center fixed;
+        background-size: cover;
+    }
+}

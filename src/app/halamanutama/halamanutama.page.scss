@@ -1,0 +1,350 @@
+/* Base styles */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    background-color: #324851;
+    background-image: url(/assets/bg_halamandepan.png);
+    background-size: cover;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header area with card and login button */
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card styles */
+ion-card {
+    width: 230px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #324851;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 0 10px rgba(248, 244, 244, 0.1);
+    margin-top: -55px;
+}
+
+.atas {
+    margin-top: -43px;
+    margin-left: 45px;
+    font-family: 'Trebuchet MS';
+    font-size: 15px;
+    color: #FFFFFF;
+    z-index: 1; /* Add z-index to ensure text stays on top */
+    position: relative; /* Add position relative for z-index to work */
+    display: block;
+    max-width: 260px;
+    line-height: 1.2;
+    padding-right: 10px;
+}
+
+.gbr {
+    margin-top: -12px;
+    height: 80px;
+    width: 80px;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 50px);
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    margin-top: clamp(60px, 10vh, 135px);
+    line-height: 1.2;
+}
+
+h2 {
+    text-align: center;
+    font-size: clamp(20px, 3vw, 23px);
+    margin-top: -15px;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+h3 {
+    text-align: center;
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-family: 'Trebuchet MS';
+    margin-top: -45px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+/* Button styles */
+ion-button {
+    --background: #6fb98f;
+    --background-hover: #324851;
+    --background-activated: #324851;
+    --background-focused: #324851;
+    --color: #ffffff;
+    --border-radius: 10px;
+    --border-color: #324851;
+    --border-style: solid;
+    --border-width: 1px;
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: -100px;
+}
+
+.dft {
+    width: 280px;
+    height: 65px;
+    margin-top: -200px;
+    font-family: 'Lucida Sans';
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.msk {
+    font-family: 'Lucida Sans';
+    width: 85px;
+    height: 35px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-right: 20px;
+}
+
+/* Tiny Mobile Devices (320px - 375px) */
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    body {
+        min-height: 480px;
+        max-height: 885px;
+    }
+
+    .header-area {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    ion-card {
+        width: 200px;
+        height: 70px;
+        margin-left: -120px;
+        margin-top: -20px;
+    }
+    
+    .atas {
+        margin-top: -40px;
+        margin-left: 45px;
+        font-size: 13px;
+        width: 220px;
+        white-space: normal;
+        word-wrap: break-word;
+        line-height: 1.2;
+        padding-right: 5px;
+    }
+    
+    .msk {
+        position: absolute;
+        top: 35px;
+        right: 2px;
+    }
+    
+    .dft {
+        width: 250px;
+        margin-top: -60px;
+    }
+    
+    h1 {
+        display: flexbox;
+        margin-top: 80px;
+    }
+
+    h2 {
+        margin-top: -80px;
+    }
+
+    h3 {
+        margin-top: -800px;
+    }
+}
+
+/* Small Mobile Devices (376px - 475px) */
+@media screen and (min-width: 376px) and (max-width: 475px) {
+    body {
+        min-height: 668px;
+        max-height: 930px;
+        padding: 15px;
+    }
+
+    .header-area {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    ion-card {
+        width: 220px;
+        height: 70px;
+        margin-left: -150px;
+        margin-top: -10px;
+    }
+    
+    .atas {
+        margin-top: -40px;
+        margin-left: 45px;
+        font-size: 13px;
+        width: 220px;
+        white-space: normal;
+        word-wrap: break-word;
+        line-height: 1.2;
+        padding-right: 5px;
+    }
+    
+    .msk {
+        position: absolute;
+        top: 35px;
+        right: 2px;
+    }
+    
+    .dft {
+        width: 250px;
+        margin-top: -60px;
+    }
+    
+    h1 {
+        display: flexbox;
+        margin-top: 80px;
+    }
+
+    h2 {
+        margin-top: -80px;
+    }
+
+    h3 {
+        margin-top: -120px;
+    }
+}
+
+/* Tablets (476px - 768px) */
+@media screen and (min-width: 476px) and (max-width: 768px) {
+    .header-area {
+        padding: 15px;
+    }
+    
+    ion-card {
+        width: 310px;
+        height: 90px;
+        margin-top: -80px;
+        margin-left: -20px;
+    }
+    
+    .atas {
+        margin-top: -55px;
+        margin-left: 70px;
+        font-size: 18px;
+        width: 290px;
+        white-space: normal;
+        word-wrap: break-word;
+        line-height: 1.2;
+        padding-right: 5px;
+    }
+
+    .gbr {
+        margin-top: -12px;
+        height: 100px;
+        width: 100px;
+    }
+    
+    .msk {
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        font-size: clamp(16px, 4vw, 20px);
+        top: 40px;
+        right: 30px;
+    }
+    
+    .dft {
+        width: 300px;
+        height: 70px;
+        margin-top: -150px;
+        font-family: 'Lucida Sans';
+        font-size: clamp(16px, 6vw, 20px);
+    }
+
+    h1 {
+        display: flexbox;
+        margin-top: 80px;
+    }
+
+    h2 {
+        margin-top: -115px;
+        font-size: 27px;
+    }
+
+    h3 {
+        margin-top: -160px;
+        font-size: 24px;
+    }
+
+}
+
+/* Large Tablets (769px - 999px) */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    .header-area {
+        padding: 20px;
+    }
+    
+    .msk {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+    }
+
+    .dft {
+        width: 280px;
+        height: 65px;
+        margin-top: 30px;
+        font-family: 'Lucida Sans';
+        font-size: clamp(16px, 2vw, 20px);
+    }
+}
+
+/* Desktop (1000px and above) */
+@media screen and (min-width: 1000px) {
+    .header-area {
+        padding: 25px 40px;
+    }
+    
+    .msk {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    
+    .dft {
+        margin-top: 20px;
+    }
+}
+
+/* Large Desktop (1400px and above) */
+@media screen and (min-width: 1400px) {
+    .header-area {
+        padding: 30px 60px;
+    }
+    
+    .msk {
+        position: absolute;
+        top: 45px;
+        right: 60px;
+    }
+}

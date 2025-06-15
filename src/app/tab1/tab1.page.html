@@ -1,0 +1,47 @@
+<body>
+  <div class="container">
+    <div class="header">
+      <ion-img src="/assets/permo_logo.jpg" alt="Permo Logo"
+        style="height: 150px; width: 150px; margin: auto;"></ion-img>
+      <h1>PERTANIAN MOBILE</h1>
+    </div>
+
+    <!-- Kolom Username -->
+    <div class="form-group">
+      <label for="username">
+        <ion-icon aria-hidden="true" name="person-outline"></ion-icon>
+        Username
+      </label>
+      <ion-input 
+        type="text" 
+        placeholder="Masukkan username di sini" 
+        [(ngModel)]="username">
+      </ion-input>
+    </div> 
+    
+    <!-- Kolom Password -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <div class="input-group">
+        <ion-input 
+          type="password" 
+          placeholder="Ketik di sini" 
+          [(ngModel)]="konfirmasi">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </div>
+
+      <!-- Hyperlink -->
+      <div class="note">Lupa password/username?</div>
+      <a class="hyper" [routerLink]="['/lupaakun']">Klik di sini</a>
+    </div>
+
+    <!-- Tombol Masuk -->
+    <ion-button type="submit" class="masuk" [routerLink]="['/tabs/tab2']">MASUK</ion-button>
+            
+    <div class="footer">
+      <label for="akun?">Belum punya akun? </label>
+      <a [routerLink]="['/daftar']">Daftar Sekarang</a>
+    </div>
+  </div>
+</body>

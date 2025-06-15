@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="tnh">ILMU TANAH</ion-title>
+    <ion-fab>
+      <ion-fab-button href="/ilmutanah">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-container">
+    <!-- Judul -->
+    <h3 class="h3">{{tanah.title}}</h3>
+    <p class="p">Nama Latin: {{tanah.latinName}}</p>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Detail Tanah</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="detail-list">
+          <!-- Kolom Karakteristik -->
+          <div class="detail-item">
+            <div class="label">Karakteristik</div>
+            <div class="value">{{tanahDetail.karakteristik}}</div>
+          </div>
+          
+          <!-- Kolom Tumbuhan yang cocok -->
+          <div class="detail-item">
+            <div class="label">Tumbuhan yang Cocok</div>
+            <div class="value">{{tanahDetail.tumbuhan}}</div>
+          </div>
+          
+          <!-- Kolom Penyebaran -->
+          <div class="detail-item">
+            <div class="label">Penyebaran</div>
+            <div class="value">{{tanahDetail.penyebaran}}</div>
+          </div>
+          
+          <!-- Kolom UnsurpH -->
+          <div class="detail-item">
+            <div class="label">Unsur pH</div>
+            <div class="value">{{tanahDetail.unsurph}}</div>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

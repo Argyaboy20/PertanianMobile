@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="tit">PERMO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-fab>
+  <ion-fab-button href="/tabs/tab2">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<!-- Animasi Loading -->
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Tarik untuk Pembaharuan Data"
+      refreshingSpinner="circles" refreshingText="Memperbarui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div class="account-info">
+    <ion-card *ngIf="userData; else noData">
+      <ion-card-header>
+        <ion-card-title>INFORMASI AKUN</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Username</ion-label>
+          <ion-text>{{ userData.username }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-text>{{ userData.email }}</ion-text>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-text>
+            <span *ngIf="!showPassword">********</span>
+            <span *ngIf="showPassword">{{ userData.konfirmasi }}</span>
+          </ion-text>
+          <ion-button fill="clear" slot="end" (click)="togglePasswordVisibility()">
+            <ion-icon [name]="showPassword ? 'eye-off' : 'eye'" class="password-toggle">
+            </ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Jika tidak ada data -->
+    <ng-template #noData>
+      <ion-card>
+        <ion-card-content>
+          <p>Tidak ada data akun ditemukan</p>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </div>
+
+  <!-- Tombol hapus akun -->
+  <ion-button color="danger" shape="round" class="footer" (click)="confirmDelete()">
+    <a>HAPUS AKUN</a>
+  </ion-button>
+</ion-content>

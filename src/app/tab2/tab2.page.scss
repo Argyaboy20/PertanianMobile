@@ -1,0 +1,483 @@
+ion-img {
+    height: 75px;
+    width: 75px;
+    margin-left: 560px;
+}
+
+.set {
+    height: 30px;
+    width: 30px;
+    margin-bottom: -30px;
+    margin-left: 8px;
+}
+
+.peng {
+    margin-left: 25px;
+}
+
+.ion-padding {
+    margin-top: -250px;
+    margin-left: -151px;
+    color: #FFFFFF;
+    width: 470px;
+}
+
+.gan {
+    margin-top: -255px;
+    margin-left: -129px;
+    color: #FFFFFF;
+    margin-bottom: 250px;
+}
+
+.ban {
+    margin-top: -480px;
+    margin-left: -192px;
+    color: #FFFFFF;
+    margin-bottom: 180px;
+}
+
+.log {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+body {
+    font-family: Helvetica, "sans-serif";
+    color: #FFFFFF;
+    background-color: #324851;
+    padding: 0;
+}
+
+.jdl {
+    font-weight: bold;
+    margin-left: 600px;
+    margin-top: -79px;
+}
+
+.greeting-container {
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: -30px;
+}
+
+.greeting {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Lucida Sans';
+}
+
+.gambar {
+    margin-top: -50px;
+    margin-bottom: 38px;
+}
+
+.card {
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 250px;
+    background-color: #324851;
+    box-shadow: 0 0 10px rgba(248, 244, 244, 0.1);
+    border: 1px solid #FFFFFF;
+}
+
+.judul {
+    font-weight: bold;
+}
+
+.content {
+    font-family: 'Lucida Sans';
+    text-align: justify;
+    color: #FFFFFF
+}
+
+.jelajah {
+    background-color: #007bff;
+    color: #FFFFFF;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.crd {
+    width: 400px;
+    margin-left: 750px;
+    margin-top: -190px;
+    background-color: #324851;
+    box-shadow: 0 0 10px rgba(248, 244, 244, 0.1);
+    border: 1px solid #FFFFFF;
+}
+
+.ttl {
+    font-weight: bold;
+}
+
+.cntnt {
+    font-family: 'Lucida Sans';
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+.jljh {
+    background-color: #007bff;
+    color: #FFFFFF;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.kartu {
+    width: 400px;
+    margin-left: 480px;
+    margin-top: 40px;
+    background-color: #324851;
+    box-shadow: 0 0 10px rgba(248, 244, 244, 0.1);
+    border: 1px solid #FFFFFF;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Super Tiny Mobile Devices (230px - 320px)*/
+@media screen and (min-width: 230px) and (max-width: 320px) {
+    body {
+        min-height: 380px;
+        max-height: 785px;
+        padding: 10px;
+    }
+
+    .jdl {
+        margin-left: 170px;
+        font-size: 14px;
+        margin-top: -70px;
+    }
+
+    .gambar {
+        margin-left: 135px;
+        padding-top: 15px;
+        height: 70px;
+        width: 70px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .card,
+    .crd,
+    .kartu {
+        width: 280px;
+        margin: 60px auto;
+    }
+
+    .crd {
+        margin-top: -25px;
+        margin-left: auto;
+    }
+
+    .kartu {
+        margin-top: -25px;
+    }
+
+    .judul,
+    .ttl {
+        font-size: 18px;
+    }
+
+    .content,
+    .cntnt {
+        font-size: 12px;
+    }
+
+    .jelajah,
+    .jljh {
+        font-size: 13px;
+    }
+
+    .ion-padding,
+    .gan,
+    .ban {
+        width: 100%;
+        margin-left: 0px;
+        font-size: 13px;
+    }
+
+    .greeting {
+        margin-left: -20px;
+        font-size: 11px;
+        margin-top: 0px;
+    }
+}
+
+
+/* Tiny Mobile Devices (321px - 374px)*/
+@media screen and (min-width: 321px) and (max-width: 374px) {
+    body {
+        min-height: 480px;
+        max-height: 885px;
+        padding: 10px;
+    }
+
+    .jdl {
+        margin-left: 200px;
+        font-size: 16px;
+        margin-top: -75px;
+    }
+
+    .gambar {
+        margin-left: 165px;
+        padding-top: 10px;
+        height: 75px;
+        width: 75px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .card,
+    .crd,
+    .kartu {
+        width: 280px;
+        margin: 65px auto;
+    }
+
+    .crd {
+        margin-top: -25px;
+        margin-left: auto;
+    }
+
+    .kartu {
+        margin-top: -25px;
+    }
+
+    .judul,
+    .ttl {
+        font-size: 18px;
+    }
+
+    .content,
+    .cntnt {
+        font-size: 12px;
+    }
+
+    .jelajah,
+    .jljh {
+        font-size: 13px;
+    }
+
+    .ion-padding,
+    .gan,
+    .ban {
+        width: 100%;
+        margin-left: 0px;
+        font-size: 13px;
+    }
+
+    .greeting {
+        margin-left: -20px;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
+
+/* Small Mobile Devices (375px - 415px) */
+@media screen and (min-width: 375px) and (max-width: 415px) {
+    body {
+        min-height: 668px;
+        max-height: 932px;
+        padding: 15px;
+    }
+
+    .jdl {
+        margin-left: 245px;
+        font-size: 16px;
+        margin-top: -70px;  
+    }
+
+    .gambar {
+        margin-left: 205px;
+        height: 75px;
+        width: 75px;
+        margin-top: -50px auto;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .card,
+    .crd,
+    .kartu {
+        width: 280px;
+        margin: 100px auto;
+    }
+
+    .crd {
+        margin-top: -25px;
+        margin-left: auto;
+    }
+
+    .kartu {
+        margin-top: -25px;
+    }
+
+    .judul,
+    .ttl {
+        font-size: 16px;
+    }
+
+    .content,
+    .cntnt {
+        font-size: 12px;
+    }
+
+    .jelajah,
+    .jljh {
+        font-size: 13px;
+    }
+
+    .greeting {
+        margin-left: -15px;
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: -10px;
+    }
+}
+
+/* Medium Small Mobile Devices (416px - 475px)*/
+@media screen and (min-width: 416px) and (max-width: 475px) {
+    body {
+        min-height: 480px;
+        max-height: 935px;
+        padding: 10px;
+    }
+
+    .gambar {
+        margin-left: 280px;
+        padding-top: 10px;
+        height: 95px;
+        width: 95px;
+        margin-bottom: -5px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .card,
+    .crd,
+    .kartu {
+        width: 280px;
+        margin: 75px auto;
+    }
+
+    .crd {
+        margin-top: -25px;
+        margin-left: auto;
+    }
+
+    .kartu {
+        margin-top: -25px;
+    }
+
+    .judul,
+    .ttl {
+        font-size: 18px;
+    }
+
+    .content,
+    .cntnt {
+        font-size: 12px;
+    }
+
+    .jelajah,
+    .jljh {
+        font-size: 13px;
+    }
+
+    .ion-padding,
+    .gan,
+    .ban {
+        width: 100%;
+        margin-left: 0px;
+        font-size: 13px;
+    }
+
+    .greeting {
+        margin-left: -5px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+
+/* Tablets (476px - 768px) */
+@media screen and (min-width: 476px) and (max-width: 768px) {
+    .jdl {
+        margin-left: 350px;
+        font-size: 20px;
+        margin-top: -70px;
+    }
+
+    .gambar {
+        margin-left: 550px;
+        height: 100px;
+        width: 100px;
+        margin-bottom: -10px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .card, .crd, .kartu {
+        width: 450px;
+        margin: 100px auto;
+    }
+
+    .crd {
+        margin-top: 25px;
+        margin-left: auto;
+    }
+
+    .kartu {
+        margin-top: 25px;
+    }
+
+    .judul, .ttl {
+        font-size: 22px;
+    }
+
+    .content, .cntnt {
+        font-size: 14px;
+    }
+
+    .jelajah, .jljh {
+        font-size: 15px;
+    }
+}
+
+/* Large Tablets (769px - 999px) */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    .gambar {
+        margin-left: 620px;
+        height: 85px;
+        width: 85px;
+        margin-bottom: -5px;
+        margin-top: 5px;
+    }
+
+    .wrapper {
+        justify-content: center;
+    }
+
+    .card, .crd {
+        width: 350px;
+        margin: 120px 15px;
+    }
+
+    .kartu {
+        width: 400px;
+        margin: 5px auto;
+    }
+}

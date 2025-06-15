@@ -1,0 +1,283 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #324851;
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/background.png);
+}
+
+.container {
+    max-width: 530px;
+    margin: 5px auto;
+    padding: 20px;
+    background-color: #2a393e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(248, 244, 244, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: -5px;
+}
+
+.header a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.info-box i {
+    margin-right: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    padding: -5px 0;
+    margin-bottom: -18px;
+    
+    small {
+        display: block;
+        margin: 2px 0;
+        color: #dc3545;
+        font-size: 11px;
+    }
+}
+
+ion-textarea.ng-invalid.ng-touched {
+    --border-color: red;
+}
+
+/* Tiny Mobile Devices (320px - 375px) */
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    body {
+        min-height: 480px;
+        max-height: 885px;
+        padding: 10px;
+    }
+
+    .container {
+        margin: 20px auto;
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    ion-img {
+        height: 90px !important;
+        width: 90px !important;
+    }
+
+    .header h1 {
+        font-size: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    ion-textarea {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .error-message {
+        padding: -3px 0;
+        margin-bottom: -7px;
+        
+        small {
+            margin: 1px 0;
+            font-size: 10px;
+        }
+    }
+}
+
+/* Small Mobile Devices (376px - 475px) */
+@media screen and (min-width: 376px) and (max-width: 475px) {
+    body {
+        min-height: 668px;
+        max-height: 932px;
+        padding: 15px;
+    }
+
+    .container {
+        margin: 30px auto;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    ion-img {
+        height: 90px !important;
+        width: 90px !important;
+    }
+
+    .error-message {
+        padding: -4px 0;
+        margin-bottom: -5px;
+        
+        small {
+            margin: 1.5px 0;
+            font-size: 10.5px;
+        }
+    }
+}
+
+/* Tablets (476px - 768px) */
+@media screen and (min-width: 476px) and (max-width: 768px) {
+    body {
+        min-height: 880px;
+        max-height: 1050px;
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 25px;
+    }
+
+    ion-img {
+        height: 110px !important;
+        width: 110px !important;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .error-message {
+        padding: -5px 0;
+        margin-bottom: -3px;
+        
+        small {
+            margin: 2px 0;
+            font-size: 11px;
+        }
+    }
+}
+
+/* Large Tablets (769px - 999px) */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    body {
+        min-height: 1190px;
+        max-height: 1400px;
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 550px;
+        margin: 50px auto;
+        padding: 30px;
+    }
+
+    ion-img {
+        height: 150px !important;
+        width: 150px !important;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    .error-message {
+        padding: -5px 0;
+        margin-bottom: -3px;
+        
+        small {
+            margin: 2px 0;
+            font-size: 11px;
+        }
+    }
+}
+
+/* Desktop (1000px and above) */
+@media screen and (min-width: 1000px) {
+    .container {
+        max-width: 530px;
+        margin: 5px auto;
+        padding: 20px;
+    }
+
+    ion-img {
+        height: 100px !important;
+        width: 100px !important;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .error-message {
+        padding: -5px 0;
+        margin-bottom: -18px;
+        
+        small {
+            margin: 2px 0;
+            font-size: 11px;
+        }
+    }
+}

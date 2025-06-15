@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <h1>BANTUAN</h1>
+      <p>Silakan sampaikan keluhan atau pertanyaan di bawah</p>
+    </div>
+
+    <!-- Kolom Username -->
+    <form [formGroup]="bantuanForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <ion-textarea 
+          label="Username" 
+          labelPlacement="floating" 
+          fill="outline" 
+          placeholder="Ketik username di sini"
+          formControlName="username" 
+          [class.invalid]="isFieldInvalid('username')"
+        ></ion-textarea>
+        <div class="error-message" *ngIf="isFieldInvalid('username')">
+          {{ getErrorMessage('username') }}
+        </div>
+      </div>
+
+      <!-- Kolom Email -->
+      <div class="form-group">
+        <ion-textarea 
+          label="Email" 
+          labelPlacement="floating" 
+          fill="outline" 
+          placeholder="Ketik email di sini"
+          formControlName="email" 
+          [class.invalid]="isFieldInvalid('email')"
+        ></ion-textarea>
+        <div class="error-message" *ngIf="isFieldInvalid('email')">
+          {{ getErrorMessage('email') }}
+        </div>
+      </div>
+
+      <!-- Kolom Kendala -->
+      <div class="form-group kendala-group">
+        <ion-item class="kendala-item">
+          <ion-textarea 
+            formControlName="kendala" 
+            label="Kendala" 
+            labelPlacement="floating" 
+            placeholder="Ada yang bisa dibantu?" 
+            class="ken" 
+            autoGrow="true" 
+            rows="4"
+            maxlength="1000"
+          ></ion-textarea>
+        </ion-item>
+      </div>
+
+      <!-- Tombol Kirim -->
+      <div class="button-container">
+        <ion-button type="submit" expand="block" class="btn" [disabled]="bantuanForm.invalid">
+          KIRIM KENDALA
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>
